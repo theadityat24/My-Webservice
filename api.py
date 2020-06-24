@@ -1,7 +1,7 @@
 import flask
 from flask import jsonify, request
 
-from fastai.vision import load_learner\
+from fastai.vision import load_learner
 
 from io import BytesIO
 
