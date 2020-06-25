@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt
 
 COPY export_learners /export_learners
 COPY wsgi.py /wsgi.py
-COPY app.py /app.py
+COPY api.py /api.py
 
 
 RUN gunicorn wsgi:app
