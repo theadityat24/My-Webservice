@@ -11,8 +11,6 @@ COPY wsgi.py /wsgi.py
 COPY api.py /api.py
 
 
-RUN gunicorn wsgi:app
-
 EXPOSE 8080
 
 CMD ["gunicorn", "wsgi:app"]
