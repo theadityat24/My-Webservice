@@ -10,6 +10,11 @@ app.config["DEBUG"] = True
 
 tree_learner = load_learner('export_learners', 'trees.pkl')
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify(
+        {'Hello': 'World'}
+    )
 
 @app.route('/trees', methods=['GET'])
 def trees():
