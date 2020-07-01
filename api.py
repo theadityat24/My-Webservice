@@ -19,7 +19,7 @@ def home():
 @app.route('/trees', methods=['GET'])
 def trees():
     if 'img' in request.args:
-        img = open_image(BytesIO(request.args['img']))
+        img = open_image(BytesIO(bytes(request.args['img'])))
         prediction = int(tree_learner.predict(img))
         return jsonify(
             {
